@@ -1,0 +1,14 @@
+[
+    {
+        "user": "1",
+        "id": 1,
+        "total": 100,
+        "descuento": 0
+    },
+    {
+        "user": "2",
+        "id": 2,
+        "total": 100,
+        "descuento": 0
+    }
+]
