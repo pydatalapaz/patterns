@@ -3,6 +3,7 @@ from bridge import Foco, HomeSwitch, Computador
 from decorator import Pudge, CinturonFuerza, CapaMago
 from composite import Empleado, JefeUnidad, Area
 from facade import crear_organigrama
+from flyweight import ImagenFactory
 
 def version_printer(api: ApiClient):
     print(api.version())
@@ -26,4 +27,13 @@ print(pudge.inteligencia())
 area = crear_organigrama()
 area.notificar()
 
+factory = ImagenFactory()
+factory_dos = ImagenFactory()
+factory.get_imagen('a').mostrar(1, 1)
+factory.get_imagen('b').mostrar(2, 2)
+factory.get_imagen('c').mostrar(2, 2)
+
+assert factory.get_imagen('a') == factory_dos.get_imagen('a')
+# Proxy
+# Flyweight
 
